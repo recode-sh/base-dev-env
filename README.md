@@ -52,6 +52,7 @@ RUN set -euo pipefail \
   lsb-release \
   nano \
   sudo \
+  tzdata \
   unzip \
   vim \
   wget \
