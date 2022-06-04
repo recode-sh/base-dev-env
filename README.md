@@ -38,6 +38,12 @@ ARG DEBIAN_FRONTEND=noninteractive
 # RUN will use bash
 SHELL ["/bin/bash", "-c"]
 
+# We want a "standard Ubuntu"
+# (ie: not one that has been minimized
+# by removing packages and content
+# not required in a production system)
+RUN yes | unminimize
+
 # Install system dependencies
 RUN set -euo pipefail \
   && apt-get --assume-yes --quiet --quiet update \
@@ -50,6 +56,8 @@ RUN set -euo pipefail \
   gnupg \
   locales \
   lsb-release \
+  man-db \
+  manpages-posix \
   nano \
   sudo \
   tzdata \
