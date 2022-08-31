@@ -15,11 +15,9 @@ This image is the base image that powers all the development environments create
 
 ## Requirements
 
-The Recode Base Dev Env Docker image is defined as a plain Dockerfile file so it only requires `docker` to be built.
+- `docker`
 
 ## Build
-
-To build this image, the `docker build` command could be used:
 
 ```bash
 docker build -t recode-base-dev-env-image .
