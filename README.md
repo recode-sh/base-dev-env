@@ -172,7 +172,7 @@ gpg --import ~/.gnupg/recode_github_gpg_private.pgp
 # Run the CMD passed as command-line arguments
 exec "$@"
 ```
-The user's GitHub `GPG` keys are imported in the agent to be used with `GIT`. The passed `CMD` (`sleep infinity`) is then executed.
+The user's GitHub `GPG` keys are imported in the agent to be used with `git`. The passed `CMD` (`sleep infinity`) is then executed.
 
 The `ENTRYPOINT` and `CMD` commands present in the Dockerfile are overwritten by the [Recode agent](https://github.com/recode-sh/agent) at runtime to prevent users from modifiying it in their `dev_env.Dockerfile` files.
 
