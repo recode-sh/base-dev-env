@@ -1,6 +1,6 @@
 # Base Dev Env
 
-This repository contains the source code of the `recode-sh/base-dev-env` Docker image. 
+This repository contains the source code of the `recodesh/base-dev-env` Docker image. 
 
 This image is the base image that powers all the development environments created via the [Recode CLI](https://github.com/recode-sh/cli).
 
