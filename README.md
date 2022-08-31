@@ -154,11 +154,11 @@ The `ONBUILD` commands are commands that will be run during the build of your de
 
 In this case, they will enable us to create an user `recode` *in the container* that will match the one created *in the instance*. 
 
-In this way, the user `recode` *inside the container* will be able to access the Docker daemon, SSH keys and so on like the one *in the instance*.
+In this way, the user `recode` *inside the container* will be able to access the Docker daemon and the SSH keys like the one *in the instance*.
 
 ### Entrypoint
 
-The entrypoint is defined as a `bash` script in the `recode_entrypoint.sh` file:
+The entrypoint is a `bash` script named `recode_entrypoint.sh`:
 
 ```bash
 #!/bin/bash
@@ -172,9 +172,9 @@ gpg --import ~/.gnupg/recode_github_gpg_private.pgp
 # Run the CMD passed as command-line arguments
 exec "$@"
 ```
-As you can see, nothing fancy here. The user's GitHub `GPG` keys are imported in the agent to be used with `GIT`. The passed `CMD` (`sleep infinity`) is then executed.
+The user's GitHub `GPG` keys are imported in the agent to be used with `GIT`. The passed `CMD` (`sleep infinity`) is then executed.
 
-The `ENTRYPOINT` and `CMD` commands present in the Dockerfile will be overwritten by the [Recode agent](https://github.com/recode-sh/agent) when running the container in order to prevent users from modifiying it in their `dev_env.Dockerfile` files.
+The `ENTRYPOINT` and `CMD` commands present in the Dockerfile will be overwritten by the [Recode agent](https://github.com/recode-sh/agent) at runtime to prevent users from modifiying it in their `dev_env.Dockerfile` files.
 
 ## The future
 
