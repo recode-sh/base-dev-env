@@ -15,7 +15,7 @@ The `recode-sh/base-dev-env` Docker image is the base image that powers all the 
 
 ## Requirements
 
-The Recode Base Dev Env Docker image is defined as a plain Dockerfile file so it only requires `docker` to be build.
+The Recode Base Dev Env Docker image is defined as a plain Dockerfile file so it only requires `docker` to be built.
 
 ## Build
 
